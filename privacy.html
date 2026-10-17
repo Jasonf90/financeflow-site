@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — FinanceFlow</title>
+  <meta name="description" content="Privacy Policy for FinanceFlow: 100% on-device processing, zero third-party tracking, zero analytics SDKs, and end-to-end encrypted iCloud sync.">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+  <p class="brand">FinanceFlow</p>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Effective 17 October 2026 · Independent Developer: Jason Fraser</p>
+  <nav>
+    <a href="./index.html">Overview</a>
+    <a href="./privacy.html">Privacy Policy</a>
+    <a href="./terms.html">Terms of Use</a>
+    <a href="./support.html">Support &amp; FAQ</a>
+  </nav>
+</header>
+
+<div class="card highlight">
+  <p><strong>In short: FinanceFlow collects zero personal data, zero financial records, and zero telemetry.</strong> Everything you enter stays exclusively on your Apple devices or inside your private, end-to-end encrypted iCloud database. There are no developer servers, no advertising SDKs, and no analytics trackers.</p>
+</div>
+
+<h2>1. Who Is Responsible</h2>
+<p>FinanceFlow is designed and maintained by independent developer <strong>Jason Fraser</strong>. If you have questions or concerns regarding this privacy policy or the application's security architecture, contact:</p>
+<p>Email: <a href="mailto:JfDevIos@gmail.com">JfDevIos@gmail.com</a><br>Phone: <a href="tel:+12604146954">+1 (260) 414-6954</a></p>
+
+<h2>2. Information Stored Locally on Your Device</h2>
+<p>All data created or imported within FinanceFlow is stored in a sandboxed, hardware-encrypted SQLite database using SQLCipher (AES-256):</p>
+<ul>
+  <li><strong>Profiles &amp; Credentials:</strong> Profile names, PBKDF2/bcrypt-derived authentication keys, security questions, and local PINs. Your master password is never stored in plaintext.</li>
+  <li><strong>Ledger &amp; Accounts:</strong> Financial accounts, bank transactions, balances, descriptions, tags, notes, and user categorization rules.</li>
+  <li><strong>Budgets &amp; Goals:</strong> Budget envelopes, spending targets, pacing thresholds, and savings goal milestones.</li>
+  <li><strong>Recurring Charges:</strong> Subscription titles, renewal frequencies, expected amounts, and billing dates.</li>
+  <li><strong>Market Watch:</strong> Portfolio holdings, share counts, cost basis, and user watchlists.</li>
+  <li><strong>Imported Documents:</strong> Cached statement rows and receipt metadata imported from CSV, XLSX, PDF, or camera scans.</li>
+</ul>
+<p>This information remains strictly on your device. The developer has no technical means of accessing, viewing, or exporting your data.</p>
+
+<h2>3. End-to-End Encrypted iCloud Sync</h2>
+<p>When you enable iCloud Sync, FinanceFlow synchronizes your financial vault between your iPhone, iPad, and Mac using Apple's CloudKit infrastructure:</p>
+<ul>
+  <li><strong>Private Cloud Database:</strong> Data is stored in your personal, authenticated CloudKit Private Database—never a public or shared database.</li>
+  <li><strong>End-to-End Encryption (AES-256-GCM):</strong> Before any record is uploaded to CloudKit, the payload is encrypted on-device using a cryptographic key derived from your profile vault. Only your authenticated devices hold the decryption key.</li>
+  <li><strong>Zero Knowledge:</strong> Neither Apple nor the developer can read, decrypt, or analyze the contents of your synchronized records.</li>
+  <li><strong>Offline-First:</strong> Sync occurs silently in the background when connectivity is available. Local data remains fully functional and accessible offline.</li>
+</ul>
+
+<h2>4. On-Device Intelligence &amp; Hardware Permissions</h2>
+<p>FinanceFlow uses modern on-device machine learning and system hardware exclusively for user-initiated actions:</p>
+<ul>
+  <li><strong>Face ID &amp; Touch ID (<code>NSFaceIDUsageDescription</code>):</strong> Used exclusively to unlock your encrypted vault. Biometric evaluation is handled entirely by Apple's Secure Enclave; biometric data is never exposed to the app.</li>
+  <li><strong>Camera &amp; Photo Library (<code>NSCameraUsageDescription</code>, <code>NSPhotoLibraryUsageDescription</code>):</strong> Used only when you choose to scan a physical paper receipt or import a statement photo. Image processing and text extraction occur 100% on-device using Apple Vision OCR.</li>
+  <li><strong>Microphone &amp; Speech Recognition (<code>NSMicrophoneUsageDescription</code>, <code>NSSpeechRecognitionUsageDescription</code>):</strong> Used exclusively when you tap the voice transaction entry button. Audio is transcribed in real-time strictly on-device (<code>requiresOnDeviceRecognition = true</code>). Audio recordings are never saved, streamed, or uploaded to any server.</li>
+  <li><strong>Apple Intelligence (FoundationModels):</strong> Daily financial insights, spending anomaly detection, and smart search run locally on your device hardware without external API calls or third-party cloud LLMs.</li>
+</ul>
+
+<h2>5. Information FinanceFlow Does Not Collect</h2>
+<ul>
+  <li><strong>No User Accounts:</strong> No sign-up, email registration, phone number, or proprietary account is ever required.</li>
+  <li><strong>No Analytics or Telemetry:</strong> FinanceFlow includes zero third-party analytics SDKs (no Firebase, no Mixpanel, no Google Analytics, no Facebook SDK).</li>
+  <li><strong>No Advertising:</strong> FinanceFlow contains zero advertising networks and displays zero ads. We do not track you across apps or websites, and we never access Apple's Advertising Identifier (IDFA).</li>
+  <li><strong>No Third-Party Cloud Services:</strong> We do not operate external web servers, proxy servers, or cloud storage buckets for your financial data.</li>
+</ul>
+
+<h2>6. Data Retention, Portability &amp; Deletion</h2>
+<ul>
+  <li><strong>Data Portability:</strong> You may export your entire financial history at any time from <strong>Settings → Active Profile &amp; Data Portability</strong> in encrypted backup, standard CSV, or formatted PDF formats.</li>
+  <li><strong>Resetting Data:</strong> You can reset all local transactions, categories, budgets, and rules from <strong>Settings → Danger Zone → Reset Financial Data</strong>.</li>
+  <li><strong>Deleting Profiles:</strong> Deleting a profile permanently purges all local cryptographic keys and vault records. If iCloud Sync was enabled, deletion tombstones propagate the removal across your private CloudKit database.</li>
+  <li><strong>Uninstalling the App:</strong> Deleting FinanceFlow from your device permanently removes all local databases and sandbox containers.</li>
+</ul>
+
+<h2>7. Changes to This Policy</h2>
+<p>If we update this Privacy Policy to reflect app enhancements or legal requirements, the updated version will be published at this URL with an updated effective date. Because FinanceFlow does not collect your email address, please review this page periodically.</p>
+
+<footer>
+  <div>FinanceFlow · An independent app by Jason Fraser</div>
+  <div><a href="mailto:JfDevIos@gmail.com">JfDevIos@gmail.com</a></div>
+</footer>
+</div>
+</body>
+</html>

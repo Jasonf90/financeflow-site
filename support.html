@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support &amp; FAQ — FinanceFlow</title>
+  <meta name="description" content="Support and FAQ for FinanceFlow: questions, troubleshooting, bug reports, and contact info for developer Jason Fraser.">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+  <p class="brand">FinanceFlow</p>
+  <h1>Support &amp; FAQ</h1>
+  <p class="meta">Help, troubleshooting guides, and developer contact.</p>
+  <nav>
+    <a href="./index.html">Overview</a>
+    <a href="./privacy.html">Privacy Policy</a>
+    <a href="./terms.html">Terms of Use</a>
+    <a href="./support.html">Support &amp; FAQ</a>
+  </nav>
+</header>
+
+<div class="card highlight">
+  <h3 style="margin-top:0">Direct Developer Support</h3>
+  <p>FinanceFlow is an independently crafted app by <strong>Jason Fraser</strong>. I personally read every email and typically reply within 24–48 hours.</p>
+  <p>Email: <a href="mailto:JfDevIos@gmail.com">JfDevIos@gmail.com</a><br>Phone: <a href="tel:+12604146954">+1 (260) 414-6954</a></p>
+  <p class="meta">When reporting an issue, please mention your device model, iOS/macOS version, and a brief description of the steps taken.</p>
+</div>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>1. How do I get started on a fresh installation?</h3>
+<p>On your first launch, FinanceFlow opens on the <strong>"Who's Flowing?"</strong> screen with zero pre-loaded profiles to ensure complete privacy. Tap <strong>"+ New Profile"</strong>, enter your desired profile name and master password, choose security questions, and you're ready to start tracking!</p>
+
+<h3>2. How does Face ID / Touch ID unlock work?</h3>
+<p>To protect privacy in shared environments, biometric unlock defaults to disabled until explicitly turned on by the user. You can enable it during profile creation or at any time in <strong>Settings → Profile &amp; Security → Authentication &amp; Quick Unlock</strong>. For security, biometric unlock is bound exclusively to one active profile per device.</p>
+
+<h3>3. How do I enable iCloud Sync between iPhone, iPad, and Mac?</h3>
+<ul>
+  <li>Confirm that all your devices are signed into the same Apple Account and have iCloud Drive enabled in iOS/macOS Settings.</li>
+  <li>Inside FinanceFlow, go to <strong>Settings → Profile &amp; Security → iCloud Sync &amp; Multi-Device Continuity</strong> and switch iCloud Sync to <strong>Enabled</strong>.</li>
+  <li>Data is encrypted with AES-256-GCM before leaving your device and syncs silently through your private CloudKit database.</li>
+  <li>You can tap <strong>"Sync Now"</strong> at any time to immediately push or pull changes.</li>
+</ul>
+
+<h3>4. What file formats can I import?</h3>
+<p>FinanceFlow includes a robust multi-format import engine. From the <strong>Transactions</strong> screen, tap <strong>"Import CSV / XLSX / PDF"</strong>:</p>
+<ul>
+  <li><strong>CSV:</strong> Supports bank exports with positive/negative amounts, split Debit/Credit columns, and multi-row headers.</li>
+  <li><strong>Excel (.xlsx):</strong> Parses workbooks with shared strings, inline text, date serials, and multiple transaction sheets.</li>
+  <li><strong>PDF Statements:</strong> Automatically extracts dates, descriptions, and amounts from native PDF bank statements.</li>
+  <li><strong>Receipt Scanning:</strong> Snap a paper receipt with your camera (or use Continuity Camera on Mac) to extract date, merchant, and total amount via on-device Vision OCR.</li>
+</ul>
+
+<h3>5. Which devices support Apple Intelligence features?</h3>
+<p>On-device Apple Intelligence insights, spending anomaly alerts, and natural language smart search require hardware supporting Apple FoundationModels (iPhone 15 Pro, iPhone 16/17 series, or M-series iPads and Macs running iOS 18+ / macOS 15+). On older hardware, FinanceFlow operates smoothly with standard heuristic insights and high-speed rule matching.</p>
+
+<h3>6. What happens if I forget my Master Password?</h3>
+<p>Because FinanceFlow uses zero-knowledge hardware encryption, the developer cannot reset your password. However, you can recover access using your <strong>12-word Master Recovery Phrase</strong> (viewable in Settings → Profile &amp; Security) or by answering your pre-configured <strong>Security Questions</strong> from the unlock screen.</p>
+
+<h3>7. How do I restore my purchase on a new device?</h3>
+<p>FinanceFlow is a one-time purchase tied to your Apple Account. Simply download FinanceFlow from the App Store on any device signed into your Apple Account. Your purchase is automatically recognized by Apple StoreKit—no account sign-in or restoration code required.</p>
+
+<h3>8. How do I request a refund?</h3>
+<p>All App Store billing is managed exclusively by Apple. To request a refund, visit Apple's portal at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. Developers do not have access to Apple customer billing records and cannot issue direct refunds.</p>
+
+<footer>
+  <div>FinanceFlow · An independent app by Jason Fraser</div>
+  <div><a href="mailto:JfDevIos@gmail.com">JfDevIos@gmail.com</a></div>
+</footer>
+</div>
+</body>
+</html>
